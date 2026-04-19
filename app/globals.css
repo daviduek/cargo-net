@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors */
+  --color-navy: #0B1F3A;
+  --color-navy-light: #1A3660;
+  --color-navy-muted: #243B55;
+  --color-blue-brand: #1A6BFF;
+  --color-blue-dark: #0052CC;
+  --color-blue-light: #E8F0FF;
+  --color-gold: #F5A623;
+  --color-gold-dark: #D4891A;
+  --color-gold-light: #FEF3DC;
+
+  /* Neutrals */
+  --color-slate-50: #F8FAFC;
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;
+  --color-slate-400: #94A3B8;
+  --color-slate-600: #475569;
+  --color-slate-800: #1E293B;
+  --color-text: #111827;
+  --color-muted: #6B7280;
+
+  /* Fonts */
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-navy {
+    background: linear-gradient(135deg, #0B1F3A 0%, #1A3660 50%, #0B1F3A 100%);
+  }
+
+  .gradient-blue {
+    background: linear-gradient(135deg, #1A6BFF 0%, #0052CC 100%);
+  }
+
+  .gradient-hero {
+    background: linear-gradient(160deg, #0B1F3A 0%, #1A3660 40%, #0D2B50 100%);
+  }
+
+  .section-divider {
+    background: linear-gradient(90deg, transparent, #E2E8F0, transparent);
+    height: 1px;
+  }
+
+  .card-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(11, 31, 58, 0.12);
+  }
+}
